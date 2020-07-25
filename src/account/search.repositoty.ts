@@ -10,7 +10,7 @@ export class AccountSearchRepository extends Repository<messagers> {
     try {
       const things = await getRepository(messagers)
         .createQueryBuilder('things')
-        .where(' things.name LIKE :search or things.email LIKE :search', {
+        .where(' things.name ILIKE :search or things.email ILIKE :search', {
           search: '%' + chat_to + '%',
         })
         .getMany();
