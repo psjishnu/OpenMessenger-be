@@ -11,7 +11,7 @@ import * as config from 'config';
 
 const jwtConfig = config.get('jwt');
 
-require("dotenv").config();
+require('dotenv').config();
 
 @Injectable()
 export class AuthGuard implements CanActivate {

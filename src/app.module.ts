@@ -6,7 +6,7 @@ import { AccountController } from './account/account.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DbConfig } from './config/db.config';
 import { DefaultAdminModule } from 'nestjs-admin';
-
+import { ChatModule } from './chat/chat.module';
 import { MessagesModule } from './messages/messages.module';
 import { MessageController } from './messages/messages.controller';
 @Module({
@@ -15,6 +15,7 @@ import { MessageController } from './messages/messages.controller';
     AccountModule,
     DefaultAdminModule,
     MessagesModule,
+    ChatModule,
   ],
   controllers: [AccountController, MessageController],
   providers: [],
